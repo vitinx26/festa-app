@@ -1,0 +1,65 @@
+{
+  "name": "Party",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome da festa"
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "festa_junina",
+        "halloween",
+        "natal",
+        "carnaval",
+        "pascoa",
+        "dia_das_criancas",
+        "ano_novo",
+        "outro"
+      ],
+      "description": "Tema da festa"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data da festa"
+    },
+    "time": {
+      "type": "string",
+      "description": "Hor\u00e1rio da festa"
+    },
+    "location": {
+      "type": "string",
+      "description": "Local da festa"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o ou observa\u00e7\u00f5es"
+    },
+    "budget_limit": {
+      "type": "number",
+      "description": "Limite de or\u00e7amento"
+    },
+    "cover_image": {
+      "type": "string",
+      "description": "URL da imagem de capa"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planejando",
+        "confirmada",
+        "em_andamento",
+        "concluida"
+      ],
+      "default": "planejando",
+      "description": "Status da festa"
+    }
+  },
+  "required": [
+    "name",
+    "theme",
+    "date"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "PixPayment",
+  "type": "object",
+  "properties": {
+    "client_id": {
+      "type": "string",
+      "description": "ID do cliente"
+    },
+    "client_name": {
+      "type": "string",
+      "description": "Nome do cliente"
+    },
+    "client_email": {
+      "type": "string",
+      "description": "E-mail do cliente"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Valor pago em reais"
+    },
+    "receipt_url": {
+      "type": "string",
+      "description": "URL do comprovante enviado"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "aguardando",
+        "aprovado",
+        "rejeitado"
+      ],
+      "default": "aguardando",
+      "description": "Status da an\u00e1lise do comprovante"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es do admin"
+    },
+    "transaction_id": {
+      "type": "string",
+      "description": "ID da transa\u00e7\u00e3o gerada ap\u00f3s aprova\u00e7\u00e3o"
+    }
+  },
+  "required": [
+    "amount",
+    "client_email"
+  ]
+}

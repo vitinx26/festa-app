@@ -1,0 +1,47 @@
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "client_id": {
+      "type": "string",
+      "description": "ID do cliente"
+    },
+    "client_name": {
+      "type": "string",
+      "description": "Nome do cliente (cache)"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "compra",
+        "pagamento"
+      ],
+      "description": "Tipo de lan\u00e7amento"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Valor em reais"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o do lan\u00e7amento"
+    },
+    "menu_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Itens do card\u00e1pio selecionados"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data do lan\u00e7amento"
+    }
+  },
+  "required": [
+    "client_id",
+    "type",
+    "amount"
+  ]
+}

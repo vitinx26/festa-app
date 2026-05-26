@@ -1,0 +1,30 @@
+{
+  "name": "MenuItem",
+  "type": "object",
+  "properties": {
+    "menu_id": {
+      "type": "string",
+      "description": "ID do card\u00e1pio"
+    },
+    "name": {
+      "type": "string",
+      "description": "Nome do item"
+    },
+    "price": {
+      "type": "number",
+      "description": "Pre\u00e7o"
+    },
+    "category": {
+      "type": "string",
+      "description": "Categoria (bebida, petisco, etc.)"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "price"
+  ]
+}

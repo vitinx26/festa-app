@@ -1,0 +1,37 @@
+{
+  "name": "Guest",
+  "type": "object",
+  "properties": {
+    "party_id": {
+      "type": "string",
+      "description": "ID da festa associada"
+    },
+    "name": {
+      "type": "string",
+      "description": "Nome do convidado"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Telefone"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "confirmado",
+        "recusou",
+        "talvez"
+      ],
+      "default": "pendente",
+      "description": "Status da confirma\u00e7\u00e3o"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es (alergias, restri\u00e7\u00f5es, etc.)"
+    }
+  },
+  "required": [
+    "party_id",
+    "name"
+  ]
+}

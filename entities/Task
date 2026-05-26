@@ -1,0 +1,50 @@
+{
+  "name": "Task",
+  "type": "object",
+  "properties": {
+    "party_id": {
+      "type": "string",
+      "description": "ID da festa associada"
+    },
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo da tarefa"
+    },
+    "done": {
+      "type": "boolean",
+      "default": false,
+      "description": "Se a tarefa foi conclu\u00edda"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "decoracao",
+        "comida",
+        "bebida",
+        "musica",
+        "brincadeiras",
+        "limpeza",
+        "convites",
+        "outro"
+      ],
+      "description": "Categoria da tarefa"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "baixa",
+        "media",
+        "alta"
+      ],
+      "default": "media"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "party_id",
+    "title"
+  ]
+}

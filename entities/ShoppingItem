@@ -1,0 +1,43 @@
+{
+  "name": "ShoppingItem",
+  "type": "object",
+  "properties": {
+    "party_id": {
+      "type": "string",
+      "description": "ID da festa associada"
+    },
+    "name": {
+      "type": "string",
+      "description": "Nome do item"
+    },
+    "quantity": {
+      "type": "string",
+      "description": "Quantidade"
+    },
+    "estimated_price": {
+      "type": "number",
+      "description": "Pre\u00e7o estimado"
+    },
+    "bought": {
+      "type": "boolean",
+      "default": false,
+      "description": "Se j\u00e1 foi comprado"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "decoracao",
+        "comida",
+        "bebida",
+        "descartaveis",
+        "fantasia",
+        "outro"
+      ],
+      "description": "Categoria do item"
+    }
+  },
+  "required": [
+    "party_id",
+    "name"
+  ]
+}
