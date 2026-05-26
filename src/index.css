@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --background: 222 47% 7%;
+    --foreground: 210 40% 96%;
+    --card: 222 40% 10%;
+    --card-foreground: 210 40% 96%;
+    --popover: 222 40% 10%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 196 100% 50%;
+    --primary-foreground: 222 47% 7%;
+    --secondary: 222 35% 16%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 222 35% 14%;
+    --muted-foreground: 215 20% 55%;
+    --accent: 196 100% 50%;
+    --accent-foreground: 222 47% 7%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 196 100% 50%;
+    --chart-1: 196 100% 50%;
+    --chart-2: 145 65% 42%;
+    --chart-3: 340 75% 55%;
+    --chart-4: 45 90% 65%;
+    --chart-5: 270 50% 65%;
+    --radius: 0.75rem;
+    --sidebar-background: 222 45% 8%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 196 100% 50%;
+    --sidebar-primary-foreground: 222 47% 7%;
+    --sidebar-accent: 222 35% 14%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 222 30% 16%;
+    --sidebar-ring: 196 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+
+/* Glow effect utility */
+.glow-primary {
+  box-shadow: 0 0 20px hsla(196, 100%, 50%, 0.3);
+}
